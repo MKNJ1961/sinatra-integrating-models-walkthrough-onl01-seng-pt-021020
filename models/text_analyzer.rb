@@ -1,11 +1,11 @@
 class TextAnalyzer
   attr_reader :text
 
- 
+
   def initialize(text)
     @text = text.downcase
   end
- 
+
 
 
   def initialize(text)
@@ -18,15 +18,15 @@ class TextAnalyzer
     words.count
   end
 
- 
+
   def count_of_vowels
     text.scan(/[aeoui]/).count
   end
- 
+
   def count_of_consonants
     text.scan(/[bcdfghjklmnpqrstvwxyz]/).count
   end
- 
+
 
 
   def count_of_vowels
@@ -44,13 +44,13 @@ class TextAnalyzer
     arr1 = arr.uniq
     arr2 = {}
 
- 
+
     arr1.map do |c|
       arr2[c] =  arr.count(c)
     end
- 
+
     biggest = { arr2.keys.first => arr2.values.first }
- 
+
 
 
     arr1.map do |c|
@@ -66,8 +66,7 @@ class TextAnalyzer
       end
     end
 
- 
+
     biggest
   end
 end
-
